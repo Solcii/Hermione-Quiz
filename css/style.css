@@ -7,9 +7,10 @@
 }
 
 body {
-    /* background: #DCC1B6; */
     background: #FAFAFA;
 }
+
+/* Pantalla de inicio del Quiz */
 
 .pantalla-principal {
     position: absolute;
@@ -19,7 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    max-width: 70rem;
+    width: 70rem;
     background: #DCC1B6;
     border-radius: 1rem;
     box-shadow: rgba(0,0,0,0.35) 0rem 0.5rem 1.5rem;
@@ -30,8 +31,11 @@ body {
     border-radius: 1rem;
 }
 
+.pantalla-principal .hermione-mobile{
+    display: none;
+}
+
 .pantalla-principal .titulo {
-    max-width: 40%;
     margin: 8rem 0 0 5rem;
     display: flex;
     flex-direction: column;
@@ -40,7 +44,7 @@ body {
 }
 
 .pantalla-principal .titulo img {
-    max-width: 70%;
+    max-width: 15rem;
 }
 
 .pantalla-principal .titulo .divisor {
@@ -54,7 +58,9 @@ body {
     font-size: 3.4rem;
 }
 
-.pantalla-principal .titulo .start-btn {
+/* Estilo para botones principales */
+
+.quiz-btn {
     font-size: 1.5rem;
     padding: 0.5rem 2rem;
     border-radius: 1rem;
@@ -66,7 +72,43 @@ body {
     cursor: pointer;
 }
 
-.pantalla-principal .titulo .start-btn:hover {
+.quiz-btn:hover {
     background: rgb(14, 14, 14);
     transform: scale(1.1);
+}
+
+/* Info Box */
+
+.info-box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: red;
+    display: none;
+}
+
+
+/* Diseño Responsive */
+@media (max-width: 768px) {
+    .pantalla-principal {
+        flex-direction: column;
+        max-width: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+    .pantalla-principal .hermione{
+        display: none;
+    }
+
+    .pantalla-principal .hermione-mobile{
+        display: block;
+        margin-top: 2rem;
+        max-width: 80%;
+        border-radius: 1rem;
+    }
+
+    .pantalla-principal .titulo {
+        margin-left: 0;
+    }
 }
