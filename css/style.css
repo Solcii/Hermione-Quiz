@@ -159,7 +159,7 @@ body {
     justify-content: space-between;
     width: 15.5rem;
     height: 4.5rem;
-    background: #CAAFA4;
+    background: #FFEFE4;
     border: 0.1rem solid #B39488;
     border-radius: 1rem;
     padding: 0 0.8rem;
@@ -182,6 +182,66 @@ body {
     border-radius: 0.5rem;
     border: 0.1rem solid #4E0E0E;
     user-select: none;
+}
+
+.quiz-box .question-section{
+    padding: 0 3.5rem;
+    margin: 2rem 0;
+}
+
+.quiz-box .question-section .question-text {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.quiz-box .question-section .option-list {
+    list-style: none;
+    display: block;
+
+}
+
+.quiz-box .question-section .option-list .option {
+    font-size: 2.5rem;
+    background: #FFF5F1;
+    border: 0.1rem solid #CAAFA4;
+    border-radius: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quiz-box .question-section .option-list .option:hover {
+    color: #4E0E0E;
+    background: #F8E4DD;
+    border-color: #B39488;
+}
+
+.option-list .option .icon {
+    height: 2.6rem;
+    width: 2.6rem;
+    border: 0.2rem solid transparent;
+    border-radius: 50%;
+    font-size: 2rem;
+    line-height: 1.6rem;
+    text-align: center;
+    pointer-events: none;
+}
+
+.option-list .option .icon.tick {
+    color: #23903C;
+    border-color: #23903C;
+    background: #D4EDDA;
+}
+
+.option-list .option .icon.cross {
+    color: #A42834;
+    background: #F8D7DA;
+    border-color: #A42834;
 }
 
 
