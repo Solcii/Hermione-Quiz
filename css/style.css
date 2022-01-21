@@ -75,11 +75,24 @@ body {
     box-shadow: rgba(0,0,0,0.35) 0rem 0.5rem 1.5rem;
     margin-top: 1.5rem;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .quiz-btn:hover {
     background: rgb(14, 14, 14);
     transform: scale(1.1);
+}
+
+.botones .cancel-btn {
+    margin-right: 1.5rem;
+    background: #DCC1B6;
+    color: #000;
+    border: 0.1rem solid #000;
+    transition: all 0.3s ease;
+}
+
+.botones .cancel-btn:hover{
+    background: #CAAFA4;
 }
 
 /* Info Box */
@@ -120,17 +133,6 @@ body {
 .info-box .botones {
     margin: 2rem 2rem 3rem;
     text-align: right;
-}
-
-.info-box .botones .cancel-btn {
-    margin-right: 1.5rem;
-    background: #DCC1B6;
-    color: #000;
-    border: 0.1rem solid #000;
-}
-
-.info-box .botones .cancel-btn:hover{
-    background: #CAAFA4;
 }
 
 /* Quiz Box */
@@ -283,7 +285,39 @@ body {
 /* Result Box */
 .result-box {
     background: #FAFAFA;
-    display: none;
+    padding: 0 3rem 2.5rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.result-box .icon{
+    font-size: 20rem;
+    color: #4E0E0E;
+    line-height: 10rem;
+    margin: 5rem 0 2rem;
+}
+
+.result-box .result-text{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #4E0E0E;
+}
+
+.result-box .score-text p{
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
+.result-box .score-text span{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.result-box .botones .cancel-btn{
+    margin: 0 0 0 2.5rem;
 }
 
 
