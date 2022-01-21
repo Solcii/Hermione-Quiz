@@ -12,7 +12,7 @@ body {
 
 /* Configuraciones compartidas */
 
-.pantalla-principal, .info-box, .quiz-box{
+.pantalla-principal, .info-box, .quiz-box, .result-box{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -154,6 +154,10 @@ body {
     font-weight: 600;
 }
 
+.quiz-box .header-quiz-box .quiz-box-titulo span{
+    font-size: 2.5rem;
+}
+
 .quiz-box .header-quiz-box .timer{
     display: flex;
     align-items: center;
@@ -276,6 +280,11 @@ body {
     background: rgb(26, 26, 26);
 }
 
+/* Result Box */
+.result-box {
+    background: #FAFAFA;
+    display: none;
+}
 
 
 /* Diseño Responsive */
@@ -301,7 +310,37 @@ body {
         margin-left: 0;
     }
 
-    .info-box{
+    .info-box, .quiz-box{
         max-width: 80%;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .quiz-box .header-quiz-box .quiz-box-titulo{
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+    .quiz-box .header-quiz-box .timer {
+        width: 4rem;
+        padding: 0;
+
+    }
+
+    .quiz-box .header-quiz-box .timer .timer-text{
+        display: none;
+    }
+
+    .quiz-box .header-quiz-box .timer .timer-sec{
+        width: 100%;
+        height: 100%;
+        line-height: 4rem;
+    }
+    .quiz-box .question-section .question-text{
+        font-size: 1.8rem;
+    }
+    .quiz-box .quiz-box-footer{
+        flex-direction: column;
+        margin: 2rem 0;
     }
 }
