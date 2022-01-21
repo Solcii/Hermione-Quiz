@@ -5,6 +5,7 @@ const start_btn = principal_screen.querySelector('.start-btn');
 const info_box = document.querySelector('.info-box');
 const quit_btn = info_box.querySelector('.botones .cancel-btn');
 const continue_btn = info_box.querySelector('.botones .start-btn');
+const quiz_box = document.querySelector('.quiz-box')
 
 /* Press Start Btn */
 start_btn.onclick = () =>{
@@ -18,4 +19,10 @@ quit_btn.onclick = () =>{
     info_box.classList.add('desactivado');
     principal_screen.classList.remove('desactivado');
     body.style.background = '#FAFAFA';
+}
+
+/* Press Continue Btn */
+continue_btn.onclick = () =>{
+    info_box.classList.add('desactivado');
+    quiz_box.classList.remove('desactivado');
 }
