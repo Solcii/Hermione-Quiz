@@ -10,20 +10,25 @@ body {
     background: #FAFAFA;
 }
 
-/* Pantalla de inicio del Quiz */
+/* Configuraciones compartidas */
 
-.pantalla-principal {
+.pantalla-principal, .info-box{
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 70rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0,0,0,0.35) 0rem 0.5rem 1.5rem;
+}
+
+/* Pantalla de inicio del Quiz */
+
+.pantalla-principal {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 70rem;
     background: #DCC1B6;
-    border-radius: 1rem;
-    box-shadow: rgba(0,0,0,0.35) 0rem 0.5rem 1.5rem;
 }
 
 .pantalla-principal .hermione {
@@ -64,7 +69,7 @@ body {
     font-size: 1.5rem;
     padding: 0.5rem 2rem;
     border-radius: 1rem;
-    border: none;
+    border: 0.1rem solid #DCC1B6;
     background: #000;
     color: #DCC1B6;
     box-shadow: rgba(0,0,0,0.35) 0rem 0.5rem 1.5rem;
@@ -80,12 +85,51 @@ body {
 /* Info Box */
 
 .info-box{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: red;
-    display: none;
+    background: #fafafa;
+}
+
+.info-box .info-box-titulo {
+    height: 6rem;
+    width: 100%;
+    border-bottom: 0.1rem solid #4E0E0E;
+    padding: 0 3.5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.info-box .info-box-frase, .info-box .info-list{
+    padding: 0 3.5rem;
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    text-align: justify;
+}
+
+.info-box .info-list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.info-box .info-list .info{
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.info-box .botones {
+    margin: 2rem 2rem 3rem;
+    text-align: right;
+}
+
+.info-box .botones .cancel-btn {
+    margin-right: 1.5rem;
+    background: #DCC1B6;
+    color: #000;
+    border: 0.1rem solid #000;
+}
+
+.info-box .botones .cancel-btn:hover{
+    background: #CAAFA4;
 }
 
 
@@ -110,5 +154,9 @@ body {
 
     .pantalla-principal .titulo {
         margin-left: 0;
+    }
+
+    .info-box{
+        max-width: 80%;
     }
 }
