@@ -8,6 +8,7 @@
 
 body {
     background: #FAFAFA;
+    transition: all 0.8s ease;
 }
 
 /* Configuraciones compartidas */
@@ -20,6 +21,7 @@ body {
     width: 70rem;
     border-radius: 1rem;
     box-shadow: rgba(0,0,0,0.35) 0rem 0.5rem 1.5rem;
+    transition: all 0.8s ease;
 }
 
 /* Pantalla de inicio del Quiz */
