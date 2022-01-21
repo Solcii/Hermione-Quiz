@@ -136,6 +136,7 @@ body {
 /* Quiz Box */
 .quiz-box{
     background: #FAFAFA;
+    display: none;
 }
 
 .quiz-box .header-quiz-box{
