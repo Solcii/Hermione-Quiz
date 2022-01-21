@@ -99,7 +99,6 @@ body {
 
 .info-box{
     background: #fafafa;
-    display: none;
 }
 
 .info-box .info-box-titulo {
@@ -138,7 +137,6 @@ body {
 /* Quiz Box */
 .quiz-box{
     background: #FAFAFA;
-    display: none;
 }
 
 .quiz-box .header-quiz-box{
@@ -318,6 +316,12 @@ body {
 
 .result-box .botones .cancel-btn{
     margin: 0 0 0 2.5rem;
+}
+
+.desactivado {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.5);
 }
 
 
