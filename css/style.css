@@ -12,7 +12,7 @@ body {
 
 /* Configuraciones compartidas */
 
-.pantalla-principal, .info-box{
+.pantalla-principal, .info-box, .quiz-box{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -131,6 +131,57 @@ body {
 
 .info-box .botones .cancel-btn:hover{
     background: #CAAFA4;
+}
+
+/* Quiz Box */
+.quiz-box{
+    background: #FAFAFA;
+}
+
+.quiz-box .header-quiz-box{
+    height: 7rem;
+    width: 100%;
+    padding: 0 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0,0,0,0.1) 0rem 0.3rem 0.5rem 0.1rem;
+}
+
+.quiz-box .header-quiz-box .quiz-box-titulo{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.quiz-box .header-quiz-box .timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15.5rem;
+    height: 4.5rem;
+    background: #CAAFA4;
+    border: 0.1rem solid #B39488;
+    border-radius: 1rem;
+    padding: 0 0.8rem;
+}
+
+.quiz-box .header-quiz-box .timer .timer-text {
+    font-size: 1.3rem;
+    user-select: none;
+}
+
+.quiz-box .header-quiz-box .timer .timer-sec{
+    font-size: 1.7rem;
+    font-weight: 500;
+    background: #4E0E0E;
+    height: 3rem;
+    width: 3.4rem;
+    color: #FFF;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #4E0E0E;
+    user-select: none;
 }
 
 
