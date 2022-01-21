@@ -173,25 +173,25 @@ body {
 .quiz-box .header-quiz-box .timer .timer-sec{
     font-size: 1.7rem;
     font-weight: 500;
-    background: #4E0E0E;
+    background: #000;
     height: 3rem;
     width: 3.4rem;
     color: #FFF;
     text-align: center;
     line-height: 3rem;
     border-radius: 0.5rem;
-    border: 0.1rem solid #4E0E0E;
+    border: 0.1rem solid #000;
     user-select: none;
 }
 
 .quiz-box .question-section{
     padding: 0 3.5rem;
-    margin: 2rem 0;
+    margin: 2rem 0 1rem;
 }
 
 .quiz-box .question-section .question-text {
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: 400;
     margin-bottom: 2rem;
 }
 
@@ -202,7 +202,7 @@ body {
 }
 
 .quiz-box .question-section .option-list .option {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     background: #FFF5F1;
     border: 0.1rem solid #CAAFA4;
     border-radius: 0.5rem;
@@ -219,6 +219,9 @@ body {
     color: #4E0E0E;
     background: #F8E4DD;
     border-color: #B39488;
+}
+.quiz-box .question-section .option-list .option:last-child{
+    margin-bottom: 0;
 }
 
 .option-list .option .icon {
@@ -243,6 +246,35 @@ body {
     background: #F8D7DA;
     border-color: #A42834;
 }
+
+.quiz-box .quiz-box-footer {
+    height: 7rem;
+    width: 100%;
+    padding: 0 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz-box .quiz-box-footer .total-preguntas p{
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+.quiz-box .quiz-box-footer .total-preguntas p span{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.quiz-box .quiz-box-footer .next-btn {
+    margin-top: 0;
+}
+
+.quiz-box .quiz-box-footer .next-btn:hover{
+    transform: scale(1);
+    background: rgb(26, 26, 26);
+}
+
 
 
 /* Diseño Responsive */
