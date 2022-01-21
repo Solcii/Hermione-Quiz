@@ -302,7 +302,7 @@ body {
 
 .result-box .result-text{
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 600;
     color: #4E0E0E;
 }
 
@@ -344,7 +344,7 @@ body {
         margin-left: 0;
     }
 
-    .info-box, .quiz-box{
+    .info-box, .quiz-box, .result-box{
         max-width: 80%;
     }
 
@@ -375,6 +375,16 @@ body {
     }
     .quiz-box .quiz-box-footer{
         flex-direction: column;
+        margin: 2rem 0;
+    }
+    .result-box .score-text p{
+        font-size: 1.9rem;
+    }
+    .result-box .botones{
+        display: flex;
+        flex-direction: column;
+    }
+    .result-box .botones .cancel-btn{
         margin: 2rem 0;
     }
 }
