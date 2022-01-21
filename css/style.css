@@ -86,10 +86,11 @@ body {
 
 .info-box{
     background: #fafafa;
+    display: none;
 }
 
 .info-box .info-box-titulo {
-    height: 6rem;
+    height: 7rem;
     width: 100%;
     border-bottom: 0.1rem solid #4E0E0E;
     padding: 0 3.5rem;
