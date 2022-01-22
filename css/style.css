@@ -149,6 +149,7 @@ body {
     align-items: center;
     justify-content: space-between;
     box-shadow: rgba(0,0,0,0.1) 0rem 0.3rem 0.5rem 0.1rem;
+    position: relative;
 }
 
 .quiz-box .header-quiz-box .quiz-box-titulo{
@@ -189,6 +190,15 @@ body {
     border-radius: 0.5rem;
     border: 0.1rem solid #000;
     user-select: none;
+}
+
+.quiz-box .header-quiz-box .time-line{
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    height: 0.3rem;
+    width: 50%;
+    background: #4E0E0E;
 }
 
 .quiz-box .question-section{
