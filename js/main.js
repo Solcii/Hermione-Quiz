@@ -7,6 +7,7 @@ const quit_btn = info_box.querySelector('.botones .cancel-btn');
 const continue_btn = info_box.querySelector('.botones .start-btn');
 const quiz_box = document.querySelector('.quiz-box')
 const option_list = document.querySelector('.option-list');
+const timeCount = quiz_box.querySelector('.timer .timer-sec');
 
 /* Press Start Btn */
 start_btn.onclick = () =>{
@@ -28,10 +29,13 @@ continue_btn.onclick = () =>{
     quiz_box.classList.remove('desactivado');
     showQuestions(0);
     QuestionCounter(1);
+    startTimer(15);
 }
 
 let contador = 0;
 let numero_pregunta = 1;
+let contador_tiempo;
+let timeValue = 15;
 
 const next_btn = quiz_box.querySelector('.next-btn');
 
@@ -41,7 +45,9 @@ next_btn.onclick = () =>{
         contador++;
         numero_pregunta++;
         showQuestions(contador);
-        QuestionCounter(numero_pregunta); 
+        QuestionCounter(numero_pregunta);
+        clearInterval(contador_tiempo);
+        startTimer(timeValue); 
     }else{
         console.log('Quiz completado');
     }
@@ -71,6 +77,7 @@ let tickIcon = '<div class = "icon tick"><i class="fas fa-check"></i></div>';
 let crossIcon = '<div class = "icon cross"><i class="fas fa-times"></i></div>';
 
 function optionSelected(answer){
+    clearInterval(contador_tiempo);
     let userAnswer = answer.textContent;
     let correctAnswer = questions[contador].answer;
     let allOptions = option_list.children.length;
@@ -94,6 +101,17 @@ function optionSelected(answer){
         option_list.children[i].classList.add('opcion-desabilitada');
     }
 }
+
+/* Timer */
+
+function startTimer(time){
+    contador_tiempo = setInterval(timer, 1000);
+    function timer(){
+        timeCount.textContent = time;
+        time--;
+    }
+}
+
 /* Contador preguntas */
 
 function QuestionCounter(index){
