@@ -1,9 +1,9 @@
-questions = [
+let questions = [
     {
-        numb = 1,
-        question = 'Lumos es el hechizo que produce luz de la varita del usuario. ¿Qué hechizo lo apaga?',
-        answer = 'Nox',
-        options = [
+        numb: 1,
+        question: 'Lumos es el hechizo que produce luz de la varita del usuario. ¿Qué hechizo lo apaga?',
+        answer: 'Nox',
+        options: [
             'Expelliarmus',
             'Nox',
             'Serpensortia',
@@ -12,10 +12,10 @@ questions = [
         ]
     },
     {
-        numb = 2,
-        question = '¿Qué efecto tiene el hechizo Brackium Emendo en una persona?',
-        answer = 'Vuelve gelatina sus huesos',
-        options = [
+        numb: 2,
+        question: '¿Qué efecto tiene el hechizo Brackium Emendo en una persona?',
+        answer: 'Vuelve gelatina sus huesos',
+        options: [
             'Convierte sus huesos en madera',
             'Lo obliga a hablar pársel',
             'Vuelve gelatina sus huesos',
@@ -24,10 +24,10 @@ questions = [
         ]
     },
     {
-        numb = 3,
-        question = '¿"El ingenio sin medida es el mayor tesoro del hombre" es el lema de qué casa?',
-        answer = 'Ravenclaw',
-        options = [
+        numb: 3,
+        question: '¿"El ingenio sin medida es el mayor tesoro del hombre" es el lema de qué casa?',
+        answer: 'Ravenclaw',
+        options: [
             'Gryffindor',
             'Hufflepuff',
             'Ravenclaw',
@@ -36,10 +36,10 @@ questions = [
         ]
     },
     {
-        numb = 4,
-        question = '¿Qué es un thestral?',
-        answer = 'Un caballo alado invisible',
-        options = [
+        numb: 4,
+        question: '¿Qué es un thestral?',
+        answer: 'Un caballo alado invisible',
+        options: [
             'Un tipo de dragón',
             'Un duendecillo',
             'Una cabeza encogida parlante',
@@ -48,10 +48,10 @@ questions = [
         ]
     },
     {
-        numb = 5,
-        question = 'Cuando se desentierra una madrágora, ¿qué ocurre?',
-        answer = 'Grita',
-        options = [
+        numb: 5,
+        question: 'Cuando se desentierra una mandrágora, ¿qué ocurre?',
+        answer: 'Grita',
+        options: [
             'Baila',
             'Bosteza',
             'Grita',
@@ -60,10 +60,10 @@ questions = [
         ]
     },
     {
-        numb = 6,
-        question = '¿Las lágrimas de qué animal son el único antídoto conocido contra el veneno de basilisco?',
-        answer = 'Fénix',
-        options = [
+        numb: 6,
+        question: '¿Las lágrimas de qué animal son el único antídoto conocido contra el veneno de basilisco?',
+        answer: 'Fénix',
+        options: [
             'Billywig',
             'Hipogrifo',
             'Boggart',
@@ -72,10 +72,10 @@ questions = [
         ]
     },
     {
-        numb = 7,
-        question = 'Selecciona los tres maleficios imperdonables',
-        answer = 'Imperius, Cruciatus y Avada Kedavra',
-        options = [
+        numb: 7,
+        question: 'Selecciona los tres maleficios imperdonables',
+        answer: 'Imperius, Cruciatus y Avada Kedavra',
+        options: [
             'Avada Kedavra, Confuso y Cruciatus',
             'Imperius, Oppugno y Avada Kedavra',
             'Bombardo, Confuso y Cruciatus',
@@ -84,10 +84,10 @@ questions = [
         ]
     },
     {
-        numb = 8,
-        question = '¿Quién es el autor de la serie de 7 libros titulada "El libro estándar de hechizos"?',
-        answer = 'Miranda Azor',
-        options = [
+        numb: 8,
+        question: '¿Quién es el autor de la serie de 7 libros titulada "El libro estándar de hechizos"?',
+        answer: 'Miranda Azor',
+        options: [
             'Alastor Moody',
             'Batilda Bagshot',
             'Miranda Azor',
@@ -96,10 +96,10 @@ questions = [
         ]
     },
     {
-        numb = 9,
-        question = '¿El hechizo "Piertotum Locomotor" da vida a qué tipo de objetos?',
-        answer = 'Estatuas',
-        options = [
+        numb: 9,
+        question: '¿El hechizo "Piertotum Locomotor" da vida a qué tipo de objetos?',
+        answer: 'Estatuas',
+        options: [
             'Rocas',
             'Muebles',
             'Estatuas',
@@ -108,10 +108,10 @@ questions = [
         ]
     },
     {
-        numb = 10,
-        question = '¿Cuál fue el primer nombre del fundador de la casa Slytherin?',
-        answer = 'Salazar',
-        options = [
+        numb: 10,
+        question: '¿Cuál fue el primer nombre del fundador de la casa Slytherin?',
+        answer: 'Salazar',
+        options: [
             'Marvolo',
             'James',
             'Salazar',
