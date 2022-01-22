@@ -25,24 +25,39 @@ quit_btn.onclick = () =>{
 continue_btn.onclick = () =>{
     info_box.classList.add('desactivado');
     quiz_box.classList.remove('desactivado');
-    showQuestions(4);
+    showQuestions(0);
 }
 
 let contador = 0;
 
 const next_btn = quiz_box.querySelector('.next-btn');
 
+/* Press Next Btn */
+next_btn.onclick = () =>{
+    if(contador < questions.length - 1){
+        contador++;
+        showQuestions(contador); 
+    }else{
+        console.log('Quiz completado');
+    }
+}
+
 /* Obteniendo preguntas y opciones del array */
 
 function showQuestions(index){
+    const question_num = document.querySelector('.quiz-box-titulo span');
     const question_text = document.querySelector('.question-text');
     const option_list = document.querySelector('.option-list');
+    const cont_question = document.querySelector('.question-numb');
+
     let option_tag = '<li class="option"><span>' + questions[index].options[0] + '</span></li>'
                     + '<li class="option"><span>' + questions[index].options[1] + '</span></li>'
                     + '<li class="option"><span>' + questions[index].options[2] + '</span></li>'
                     + '<li class="option"><span>' + questions[index].options[3] + '</span></li>'
                     + '<li class="option"><span>' + questions[index].options[4] + '</span></li>';
 
+    question_num.innerHTML = questions[index].numb;
     question_text.innerHTML = questions[index].question;
     option_list.innerHTML = option_tag
+    cont_question.innerHTML = questions[index].numb;
 }
