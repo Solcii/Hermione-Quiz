@@ -26,3 +26,4 @@ continue_btn.onclick = () =>{
     info_box.classList.add('desactivado');
     quiz_box.classList.remove('desactivado');
 }
+
