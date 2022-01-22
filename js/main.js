@@ -67,18 +67,24 @@ function showQuestions(index){
     }
 }
 
+let tickIcon = '<div class = "icon tick"><i class="fas fa-check"></i></div>';
+let crossIcon = '<div class = "icon cross"><i class="fas fa-times"></i></div>';
+
 function optionSelected(answer){
     let userAnswer = answer.textContent;
     let correctAnswer = questions[contador].answer;
     let allOptions = option_list.children.length;
     if(userAnswer == correctAnswer){
         answer.classList.add('correct');
+        answer.insertAdjacentHTML('beforeend', tickIcon);
     }else{
         answer.classList.add('incorrect');
+        answer.insertAdjacentHTML('beforeend', crossIcon);
 
         for (let i = 0; i < allOptions; i++){
             if(option_list.children[i].textContent == correctAnswer){
                 option_list.children[i].setAttribute('class', 'option correct');
+                option_list.children[i].insertAdjacentHTML('beforeend', tickIcon);
             }
         }
     }
