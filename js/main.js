@@ -6,6 +6,7 @@ const info_box = document.querySelector('.info-box');
 const quit_btn = info_box.querySelector('.botones .cancel-btn');
 const continue_btn = info_box.querySelector('.botones .start-btn');
 const quiz_box = document.querySelector('.quiz-box')
+const option_list = document.querySelector('.option-list');
 
 /* Press Start Btn */
 start_btn.onclick = () =>{
@@ -50,7 +51,6 @@ next_btn.onclick = () =>{
 
 function showQuestions(index){
     const question_text = document.querySelector('.question-text');
-    const option_list = document.querySelector('.option-list');
 
     let option_tag = '<li class="option"><span>' + questions[index].options[0] + '</span></li>'
                     + '<li class="option"><span>' + questions[index].options[1] + '</span></li>'
@@ -70,12 +70,25 @@ function showQuestions(index){
 function optionSelected(answer){
     let userAnswer = answer.textContent;
     let correctAnswer = questions[contador].answer;
+    let allOptions = option_list.children.length;
     if(userAnswer == correctAnswer){
         answer.classList.add('correct');
     }else{
         answer.classList.add('incorrect');
+
+        for (let i = 0; i < allOptions; i++){
+            if(option_list.children[i].textContent == correctAnswer){
+                option_list.children[i].setAttribute('class', 'option correct');
+            }
+        }
+    }
+
+    /* Deshabilitar opciones luego de que el usuario selecciona una */
+    for(let i = 0; i < allOptions; i++){
+        option_list.children[i].classList.add('opcion-desabilitada');
     }
 }
+/* Contador preguntas */
 
 function QuestionCounter(index){
     const question_num = document.querySelector('.quiz-box-titulo span');

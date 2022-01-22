@@ -254,6 +254,22 @@ body {
     border-color: #A42834;
 }
 
+.quiz-box .question-section .option-list .option.correct{
+    color: #155724;
+    border-color: #C3E6CB;
+    background: #B6E2C0;
+}
+
+.quiz-box .question-section .option-list .option.incorrect{
+    color: #721C24;
+    border-color: #F8D7DA;
+    background: #F5C6CB;
+}
+
+.quiz-box .question-section .option-list .opcion-desabilitada{
+    pointer-events: none;
+}
+
 .quiz-box .quiz-box-footer {
     height: 7rem;
     width: 100%;
