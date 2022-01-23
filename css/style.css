@@ -300,6 +300,7 @@ body {
 
 .quiz-box .quiz-box-footer .next-btn {
     margin-top: 0;
+    display: none;
 }
 
 .quiz-box .quiz-box-footer .next-btn:hover{

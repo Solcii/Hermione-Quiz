@@ -53,6 +53,7 @@ next_btn.onclick = () => {
         clearInterval(contadorLinea);
         startTimer(timeValue);
         startTimerLine(widthValue);
+        next_btn.style.display = 'none';
     } else {
         console.log("Quiz completado");
     }
@@ -63,22 +64,11 @@ next_btn.onclick = () => {
 function showQuestions(index) {
     const question_text = document.querySelector(".question-text");
 
-    let option_tag =
-        '<li class="option"><span>' +
-        questions[index].options[0] +
-        "</span></li>" +
-        '<li class="option"><span>' +
-        questions[index].options[1] +
-        "</span></li>" +
-        '<li class="option"><span>' +
-        questions[index].options[2] +
-        "</span></li>" +
-        '<li class="option"><span>' +
-        questions[index].options[3] +
-        "</span></li>" +
-        '<li class="option"><span>' +
-        questions[index].options[4] +
-        "</span></li>";
+    let option_tag = '<li class="option"><span>' + questions[index].options[0] + "</span></li>" 
+                    +'<li class="option"><span>' + questions[index].options[1] + "</span></li>" 
+                    +'<li class="option"><span>' + questions[index].options[2] + "</span></li>" 
+                    +'<li class="option"><span>' + questions[index].options[3] + "</span></li>" 
+                    +'<li class="option"><span>' + questions[index].options[4] + "</span></li>";
 
     question_text.innerHTML = questions[index].question;
     option_list.innerHTML = option_tag;
@@ -117,6 +107,12 @@ function optionSelected(answer) {
     for (let i = 0; i < allOptions; i++) {
         option_list.children[i].classList.add("opcion-desabilitada");
     }
+    /* Habilitar boton de siguiente pregunta */
+    if(contador == questions.length - 1){
+        next_btn.textContent = 'Finalizar Quiz';
+    }
+    next_btn.style.display = "block";
+    
 }
 
 /* Timer */
