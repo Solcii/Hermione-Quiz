@@ -136,7 +136,7 @@ function showResultBox(){
         result_text.textContent = '¡Estuviste cerca! Desaprobaste los exámenes por muy pocos puntos';
         icon_result.classList.add('fa-sad-tear');
     }else{
-        result_text.textContent = 'El jurado está asombrado, ¡nunca habían corregido unos exámenes tan malos!';
+        result_text.textContent = 'El jurado está asombrado, ¡nunca había corregido unos exámenes tan malos!';
         icon_result.classList.add('fa-sad-cry');
     }
 

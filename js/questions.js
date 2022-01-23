@@ -41,9 +41,9 @@ let questions = [
         answer: 'Un caballo alado invisible',
         options: [
             'Un tipo de dragón',
-            'Un duendecillo',
-            'Una cabeza encogida parlante',
             'Un caballo alado invisible',
+            'Una cabeza encogida parlante',
+            'Un duendecillo',
             'Un espejo mágico'
         ]
     },
@@ -89,8 +89,8 @@ let questions = [
         answer: 'Miranda Azor',
         options: [
             'Alastor Moody',
-            'Batilda Bagshot',
             'Miranda Azor',
+            'Batilda Bagshot',
             'Albus Dumbledore',
             'Rita Skeeter'
         ]
