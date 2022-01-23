@@ -11,7 +11,6 @@ const next_btn = quiz_box.querySelector(".next-btn");
 const timeCount = quiz_box.querySelector(".timer .timer-sec");
 const timeLine = quiz_box.querySelector(".header-quiz-box .time-line");
 const result_box = document.querySelector('.result-box');
-const restart_quiz = result_box.querySelector('.botones .restart');
 const cancel_quiz = result_box.querySelector('.botones .cancel-btn');
 
 /* Press Start Btn */
@@ -45,8 +44,6 @@ let contadorLinea;
 let timeValue = 15;
 let widthValue = 0;
 let userScore = 0;
-
-
 
 /* Press Next Btn */
 next_btn.onclick = () => {
@@ -117,11 +114,6 @@ function optionSelected(answer) {
         option_list.children[i].classList.add("opcion-desabilitada");
     }
     /* Habilitar boton de siguiente pregunta */
-    if(contador == questions.length - 1){
-        next_btn.textContent = 'Finalizar Quiz';
-    }else{
-        next_btn.textContent = 'Siguiente pregunta';
-    }
     next_btn.style.display = "block";
     
 }
@@ -160,25 +152,6 @@ cancel_quiz.onclick = () =>{
     window.location.reload();
 }
 
-/* Reiniciar Quiz */
-restart_quiz.onclick = () =>{
-    result_box.classList.add('desactivado');
-    quiz_box.classList.remove('desactivado');
-    let contador = 0;
-    let numero_pregunta = 1;
-    let timeValue = 15;
-    let widthValue = 0;
-    let userScore = 0;
-    console.log(contador, numero_pregunta, timeValue, widthValue, userScore);
-    showQuestions(contador);
-    questionCounter(numero_pregunta);
-    clearInterval(contador_tiempo);
-    clearInterval(contadorLinea);
-    startTimer(timeValue);
-    startTimerLine(widthValue);
-    next_btn.style.display = 'none';
-}
-
 /* Timer */
 
 function startTimer(time) {
@@ -205,12 +178,6 @@ function startTimer(time) {
             }
             for (let i = 0; i < allOptions; i++) {
                 option_list.children[i].classList.add("opcion-desabilitada");
-            }
-            /* Habilitar boton de siguiente pregunta */
-            if(contador == questions.length - 1){
-                next_btn.textContent = 'Finalizar Quiz';
-            }else{
-                next_btn.textContent = 'Siguiente pregunta';
             }
             next_btn.style.display = "block";
         }

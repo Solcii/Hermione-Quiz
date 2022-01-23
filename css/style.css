@@ -342,10 +342,6 @@ body {
     font-weight: 600;
 }
 
-.result-box .botones .cancel-btn{
-    margin: 0 0 0 2.5rem;
-}
-
 .desactivado {
     opacity: 0;
     pointer-events: none;
