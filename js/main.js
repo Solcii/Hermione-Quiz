@@ -150,6 +150,11 @@ function showResultBox(){
     totalQuestion.textContent = questions.length
 }
 
+/* Quit Quiz */
+cancel_quiz.onclick = () =>{
+    window.location.reload();
+}
+
 /* Timer */
 
 function startTimer(time) {
