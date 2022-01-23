@@ -7,8 +7,12 @@ const quit_btn = info_box.querySelector(".botones .cancel-btn");
 const continue_btn = info_box.querySelector(".botones .start-btn");
 const quiz_box = document.querySelector(".quiz-box");
 const option_list = document.querySelector(".option-list");
+const next_btn = quiz_box.querySelector(".next-btn");
 const timeCount = quiz_box.querySelector(".timer .timer-sec");
 const timeLine = quiz_box.querySelector(".header-quiz-box .time-line");
+const result_box = document.querySelector('.result-box');
+const restart_quiz = result_box.querySelector('.botones .restart');
+const cancel_quiz = result_box.querySelector('.botones .cancel-btn');
 
 /* Press Start Btn */
 start_btn.onclick = () => {
@@ -39,8 +43,9 @@ let numero_pregunta = 1;
 let contador_tiempo;
 let timeValue = 15;
 let widthValue = 0;
+let userScore = 0;
 
-const next_btn = quiz_box.querySelector(".next-btn");
+
 
 /* Press Next Btn */
 next_btn.onclick = () => {
@@ -55,7 +60,7 @@ next_btn.onclick = () => {
         startTimerLine(widthValue);
         next_btn.style.display = 'none';
     } else {
-        console.log("Quiz completado");
+        showResultBox();
     }
 };
 
@@ -89,6 +94,7 @@ function optionSelected(answer) {
     let correctAnswer = questions[contador].answer;
     let allOptions = option_list.children.length;
     if (userAnswer == correctAnswer) {
+        userScore += 1;
         answer.classList.add("correct");
         answer.insertAdjacentHTML("beforeend", tickIcon);
     } else {
@@ -113,6 +119,35 @@ function optionSelected(answer) {
     }
     next_btn.style.display = "block";
     
+}
+
+/* Mostrar Resultados */
+
+function showResultBox(){
+    quiz_box.classList.add('desactivado');
+    result_box.classList.remove('desactivado');
+
+    const result_text = result_box.querySelector('.result-text');
+    const icon_result = result_box.querySelector('.icon i')
+    if(userScore >= 8){
+        result_text.textContent = '¡Has completado los exámenes con éxito!';
+        icon_result.classList.add('fa-smile-beam');
+    }else if(userScore >= 6 && userScore < 8){
+        result_text.textContent = 'Has aprobado los exámenes, sigue estudiando para mejorar tus calificaciones';
+        icon_result.classList.add('fa-smile');
+    }else if(userScore >= 4 && userScore < 6){
+        result_text.textContent = '¡Estuviste cerca! Desaprobaste los exámenes por muy pocos puntos';
+        icon_result.classList.add('fa-sad-tear');
+    }else{
+        result_text.textContent = 'El jurado está asombrado, ¡nunca habían corregido unos exámenes tan malos!';
+        icon_result.classList.add('fa-sad-cry');
+    }
+
+
+    const scoreText = result_box.querySelector('.score-text p .user-score');
+    const totalQuestion = result_box.querySelector('.score-text p .total-question');
+    scoreText.textContent = userScore;
+    totalQuestion.textContent = questions.length
 }
 
 /* Timer */
