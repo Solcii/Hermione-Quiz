@@ -41,6 +41,7 @@ continue_btn.onclick = () => {
 let contador = 0;
 let numero_pregunta = 1;
 let contador_tiempo;
+let contadorLinea;
 let timeValue = 15;
 let widthValue = 0;
 let userScore = 0;
@@ -60,6 +61,8 @@ next_btn.onclick = () => {
         startTimerLine(widthValue);
         next_btn.style.display = 'none';
     } else {
+        clearInterval(contador_tiempo);
+        clearInterval(contadorLinea);
         showResultBox();
     }
 };
@@ -116,6 +119,8 @@ function optionSelected(answer) {
     /* Habilitar boton de siguiente pregunta */
     if(contador == questions.length - 1){
         next_btn.textContent = 'Finalizar Quiz';
+    }else{
+        next_btn.textContent = 'Siguiente pregunta';
     }
     next_btn.style.display = "block";
     
@@ -155,6 +160,25 @@ cancel_quiz.onclick = () =>{
     window.location.reload();
 }
 
+/* Reiniciar Quiz */
+restart_quiz.onclick = () =>{
+    result_box.classList.add('desactivado');
+    quiz_box.classList.remove('desactivado');
+    let contador = 0;
+    let numero_pregunta = 1;
+    let timeValue = 15;
+    let widthValue = 0;
+    let userScore = 0;
+    console.log(contador, numero_pregunta, timeValue, widthValue, userScore);
+    showQuestions(contador);
+    questionCounter(numero_pregunta);
+    clearInterval(contador_tiempo);
+    clearInterval(contadorLinea);
+    startTimer(timeValue);
+    startTimerLine(widthValue);
+    next_btn.style.display = 'none';
+}
+
 /* Timer */
 
 function startTimer(time) {
@@ -169,6 +193,26 @@ function startTimer(time) {
         if (time < 0) {
             clearInterval(contador_tiempo);
             timeCount.textContent = "00";
+
+            let correctAnswer = questions[contador].answer;
+            let allOptions = option_list.children.length;
+
+            for (let i = 0; i < allOptions; i++) {
+                if (option_list.children[i].textContent == correctAnswer) {
+                    option_list.children[i].setAttribute("class", "option correct");
+                    option_list.children[i].insertAdjacentHTML("beforeend", tickIcon);
+                }
+            }
+            for (let i = 0; i < allOptions; i++) {
+                option_list.children[i].classList.add("opcion-desabilitada");
+            }
+            /* Habilitar boton de siguiente pregunta */
+            if(contador == questions.length - 1){
+                next_btn.textContent = 'Finalizar Quiz';
+            }else{
+                next_btn.textContent = 'Siguiente pregunta';
+            }
+            next_btn.style.display = "block";
         }
     }
 }
